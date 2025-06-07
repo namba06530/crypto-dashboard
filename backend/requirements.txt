@@ -7,3 +7,6 @@ asyncpg
 alembic
 httpx
 apscheduler
+python-jose[cryptography]
+passlib[bcrypt]
+psycopg2-binary
