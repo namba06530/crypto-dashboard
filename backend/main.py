@@ -1,10 +1,14 @@
 from fastapi import FastAPI
-from app.api.routes import auth
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import auth
+from app.api.routes import account
+
 
 app = FastAPI(title="Crypto Dashboard API")
 
 app.include_router(auth.router)
+app.include_router(account.router)
+
 
 
 # Autoriser le frontend à appeler l’API
