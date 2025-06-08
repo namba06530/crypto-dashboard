@@ -1,11 +1,33 @@
-<!-- frontend/index.html -->
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Crypto Dashboard</title>
-  </head>
-  <body>
-    <h1>Frontend prêt ✔️</h1>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Crypto Dashboard (Dummy)</title>
+</head>
+<body>
+  <h1>Dashboard (dummy data)</h1>
+  <pre id="output">Chargement...</pre>
+
+  <script>
+    async function fetchDashboard() {
+      const token = prompt("Enter your JWT token:", "");
+      if (!token) {
+        document.getElementById("output").textContent = "Token requis.";
+        return;
+      }
+      try {
+        const res = await fetch("http://localhost:8000/dashboard/", {
+          headers: { "Authorization": "Bearer " + token }
+        });
+        if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+        const data = await res.json();
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        document.getElementById("output").textContent = "Erreur : " + err;
+      }
+    }
+
+    fetchDashboard();
+  </script>
+</body>
 </html>
