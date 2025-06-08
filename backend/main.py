@@ -12,7 +12,6 @@ app.include_router(account.router)
 app.include_router(dashboard.router)
 
 
-
 # Autoriser le frontend à appeler l’API
 app.add_middleware(
     CORSMiddleware,
