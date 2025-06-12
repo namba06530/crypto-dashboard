@@ -24,6 +24,9 @@ Application web personnelle de suivi des comptes crypto et wallet avec agrégati
 
 ## ▶️ Lancer le projet
 
+Copier `.env.example` vers `.env` et renseigner la variable `JWT_SECRET` pour
+signer les tokens JWT.
+
 ```bash
 docker compose up --build
 ```
