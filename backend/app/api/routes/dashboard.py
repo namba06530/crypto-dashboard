@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from typing import Dict, Any
-from app.api.dependencies import get_current_user, get_db
+from app.core.deps import get_current_user
 
 router = APIRouter(prefix="/dashboard", tags=["dashboard"])
 

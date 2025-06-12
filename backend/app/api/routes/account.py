@@ -6,7 +6,8 @@ from typing import List
 
 from app.schemas.account import AccountCreate, AccountRead
 from app.models.account import Account
-from app.api.dependencies import get_db, get_current_user
+from app.core.deps import get_current_user
+from app.db.session import get_db
 from app.models.user import User
 
 router = APIRouter(prefix="/accounts", tags=["accounts"])
