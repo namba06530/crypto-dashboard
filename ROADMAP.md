@@ -6,7 +6,7 @@ Ce document trace l’ensemble des étapes prévues pour développer l’applica
 
 ## 📌 **Statut actuel**
 
-Phase 5 validée (Fetch engine réel) ✅
+Phase 6 validée (Historique des refreshs) ✅
 
 ---
 
@@ -34,7 +34,7 @@ Phase 5 validée (Fetch engine réel) ✅
 * [x] **Phase 3 :** Authentification mono-utilisateur (JWT)
 * [x] **Phase 4 :** Dashboard dummy (backend route, front minimal, affichage JSON)
 * [x] **Phase 5 :** Fetch engine réel
-* [ ] **Phase 6 :** Historique des refreshs
+* [x] **Phase 6 :** Historique des refreshs
 * [ ] **Phase 7 :** UI avancée (SPA Vue, graphiques)
 * [ ] **Phase 8 :** Tâches périodiques & scheduler
 * [ ] **Phase 9 :** CI/CD + tests
