@@ -32,3 +32,11 @@ user = User(username=username, password_hash=hashed)
 session.add(user)
 session.commit()
 print("Utilisateur créé.")
+
+from app.models.account import Base as AccountBase
+AccountBase.metadata.create_all(bind=engine)
+print("Tables de comptes créées.")
+
+from app.models.refresh_log import Base as RefreshLogBase
+RefreshLogBase.metadata.create_all(bind=engine)
+print("Tables de logs de rafraîchissement créées.")
